@@ -60,7 +60,7 @@ export const getUserByClerkId = async (clerkId: string) => {
 export const getDbUserId = async () => {
   const { userId: clerkId } = await auth();
 
-  if (!clerkId) return;
+  if (!clerkId) return null;
 
   const user = await getUserByClerkId(clerkId);
 
